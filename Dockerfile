@@ -1,20 +1,23 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim-buster
+FROM python:3.10
 
-# Set the working directory to /app
-WORKDIR /app
+ADD main.py .
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# # Set the working directory to /app
+# WORKDIR /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+# # Copy the current directory contents into the container at /app
+# COPY . /app
 
-# Expose port 80 for the Flask app
-EXPOSE 80
+# # Install any needed packages specified in requirements.txt
+#     # --trusted-host pypi.python.org: Tell pip to trust the specified host when downloading packages
+# RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Set the environment variable for Flask to know which file to run
-ENV FLASK_APP=main.py
+# # Expose port 80 for the Flask app
+# EXPOSE 80
 
-# Run the command to start the Flask app
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
+# # Set the environment variable for Flask to know which file to run
+# ENV FLASK_APP=main.py
+
+# Run the command to start the program using main.py
+CMD ["python", "./main.py"]
