@@ -1,0 +1,4 @@
+# Google Assistant API credentials
+CLIENT_ID = 'your-client-id'
+CLIENT_SECRET = 'your-client-secret'
+REFRESH_TOKEN = 'your-refresh-token'
