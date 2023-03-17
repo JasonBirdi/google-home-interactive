@@ -5,7 +5,7 @@ import googlesamples.assistant.grpc.audio_helpers as audio_helpers
 
 # Import the Config class from the config module
 from config import Config
-
+print('entered class')
 # Define the GoogleAssistant class
 class GoogleAssistant:
     def __init__(self):
